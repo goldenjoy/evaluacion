@@ -1,0 +1,18 @@
+create database if not exists prueba;
+use prueba;
+
+drop table if exists articulo;
+
+create table articulo( 
+    id varchar(10), 
+    nombre varchar(20), 
+    descripcion varchar(200), 
+    precio float,
+    modelo varchar(10),
+    primary key (id)
+);
+
+insert into articulo (id, nombre, descripcion, precio, modelo) value ("qwerty1234", "test 1", "Articulo de prueba 1", 25.02, "modelo1234");
+insert into articulo (id, nombre, descripcion, precio, modelo) value ("12345qwert", "test 2", "Articulo de prueba 2", 50.02, "modelo7890");
+
+select * from articulo;
